@@ -1,0 +1,50 @@
+/* 전체 화면 꽉 채우는 부모 */
+.fullscreen {
+  height: 100vh; /* 뷰포트 전체 높이 */
+  display: flex;
+  justify-content: center; /* 가로 정렬 */
+  align-items: center; /* 세로 정렬 */
+  background: #f3f5f7; /* 배경색은 선택사항 */
+}
+
+.wrapper_main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px; /* 최대 너비는 1200px를 넘지 않음 */
+  width: calc(
+    100% - 4rem
+  ); /* 양옆 합쳐서 4rem의 여백을 유지하며 요소 너비가 조절됨 */
+  margin: auto;
+}
+
+.wrapper_contet {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.wrapper_button {
+  align-self: stretch; /* 추가된 부분 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 버튼들을 수직 방향 가운데 정렬 */
+  gap: 1rem;
+  align-items: center;
+}
+
+.retry {
+  margin-top: auto; /* 다시하기 버튼과 가위바위보 버튼 영역이 구분되게 아래로 밀어줌 */
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(62, 123, 255);
+  color: white;
+  padding: 8px;
+  width: 80px;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+}
