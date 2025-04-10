@@ -14,7 +14,7 @@ function App() {
   const [result, setResult] = useState(null); // "win" | "lose" | "draw"
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const choices = ["가위", "바위", "보"];
+  //const choices = ["가위", "바위", "보"];
 
   const handleUserChoice = (choice) => {
     if (isPlaying) return; // 중복 클릭 방지
@@ -22,8 +22,19 @@ function App() {
     //유저의 선택
     setUserChoice(choice);
     //컴퓨터의 선택
-    const randomChoice = choices[Math.floor(Math.random() * choices.length)];
-    setComputerChoice(randomChoice);
+    //const randomChoice = choices[Math.floor(Math.random() * choices.length)];
+    //setComputerChoice(randomChoice);
+    let randomChoice;
+    if (choice === "가위") {
+      randomChoice = "보";
+      setComputerChoice(randomChoice);
+    } else if (choice === "바위") {
+      randomChoice = "가위";
+      setComputerChoice(randomChoice);
+    } else {
+      randomChoice = "바위";
+      setComputerChoice(randomChoice);
+    }
 
     const gameResult = determineResult(choice, randomChoice);
     setResult(gameResult);
