@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center; /* 가로 정렬 */
   align-items: center; /* 세로 정렬 */
-  background: #f3f5f7; /* 배경색은 선택사항 */
+  background: #f3f5f7; /* 배경색 */
 }
 
 .wrapper_main {
@@ -22,7 +22,10 @@
 .wrapper_contet {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4rem;
+
+  width: 100%;
 }
 
 .wrapper_button {
